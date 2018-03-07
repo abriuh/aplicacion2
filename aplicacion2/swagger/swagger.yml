@@ -1,0 +1,823 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /actores/:
+    get:
+      tags:
+      - actores
+      description: get Actores
+      operationId: ActoresController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Actores'
+        "403":
+          description: ""
+    post:
+      tags:
+      - actores
+      description: create Actores
+      operationId: ActoresController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Actores content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Actores'
+      responses:
+        "201":
+          description: '{int} models.Actores'
+        "403":
+          description: body is empty
+  /actores/{id}:
+    get:
+      tags:
+      - actores
+      description: get Actores by id
+      operationId: ActoresController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Actores'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - actores
+      description: update the Actores
+      operationId: ActoresController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Actores content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Actores'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Actores'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - actores
+      description: delete the Actores
+      operationId: ActoresController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /cliente/:
+    get:
+      tags:
+      - cliente
+      description: get Cliente
+      operationId: ClienteController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Cliente'
+        "403":
+          description: ""
+    post:
+      tags:
+      - cliente
+      description: create Cliente
+      operationId: ClienteController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Cliente content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Cliente'
+      responses:
+        "201":
+          description: '{int} models.Cliente'
+        "403":
+          description: body is empty
+  /cliente/{id}:
+    get:
+      tags:
+      - cliente
+      description: get Cliente by id
+      operationId: ClienteController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Cliente'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - cliente
+      description: update the Cliente
+      operationId: ClienteController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Cliente content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Cliente'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Cliente'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - cliente
+      description: delete the Cliente
+      operationId: ClienteController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /contreras/:
+    get:
+      tags:
+      - contreras
+      description: get Contreras
+      operationId: ContrerasController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Contreras'
+        "403":
+          description: ""
+    post:
+      tags:
+      - contreras
+      description: create Contreras
+      operationId: ContrerasController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Contreras content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Contreras'
+      responses:
+        "201":
+          description: '{int} models.Contreras'
+        "403":
+          description: body is empty
+  /contreras/{id}:
+    get:
+      tags:
+      - contreras
+      description: get Contreras by id
+      operationId: ContrerasController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Contreras'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - contreras
+      description: update the Contreras
+      operationId: ContrerasController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Contreras content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Contreras'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Contreras'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - contreras
+      description: delete the Contreras
+      operationId: ContrerasController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /discos/:
+    get:
+      tags:
+      - discos
+      description: get Discos
+      operationId: DiscosController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Discos'
+        "403":
+          description: ""
+    post:
+      tags:
+      - discos
+      description: create Discos
+      operationId: DiscosController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Discos content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Discos'
+      responses:
+        "201":
+          description: '{int} models.Discos'
+        "403":
+          description: body is empty
+  /discos/{id}:
+    get:
+      tags:
+      - discos
+      description: get Discos by id
+      operationId: DiscosController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Discos'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - discos
+      description: update the Discos
+      operationId: DiscosController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Discos content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Discos'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Discos'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - discos
+      description: delete the Discos
+      operationId: DiscosController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /factura/:
+    get:
+      tags:
+      - factura
+      description: get Factura
+      operationId: FacturaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Factura'
+        "403":
+          description: ""
+    post:
+      tags:
+      - factura
+      description: create Factura
+      operationId: FacturaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Factura content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Factura'
+      responses:
+        "201":
+          description: '{int} models.Factura'
+        "403":
+          description: body is empty
+  /factura/{id}:
+    get:
+      tags:
+      - factura
+      description: get Factura by id
+      operationId: FacturaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Factura'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - factura
+      description: update the Factura
+      operationId: FacturaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Factura content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Factura'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Factura'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - factura
+      description: delete the Factura
+      operationId: FacturaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /peliculas/:
+    get:
+      tags:
+      - peliculas
+      description: get Peliculas
+      operationId: PeliculasController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Peliculas'
+        "403":
+          description: ""
+    post:
+      tags:
+      - peliculas
+      description: create Peliculas
+      operationId: PeliculasController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Peliculas content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Peliculas'
+      responses:
+        "201":
+          description: '{int} models.Peliculas'
+        "403":
+          description: body is empty
+  /peliculas/{id}:
+    get:
+      tags:
+      - peliculas
+      description: get Peliculas by id
+      operationId: PeliculasController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Peliculas'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - peliculas
+      description: update the Peliculas
+      operationId: PeliculasController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Peliculas content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Peliculas'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Peliculas'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - peliculas
+      description: delete the Peliculas
+      operationId: PeliculasController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.Actores:
+    title: Actores
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      IdPelicula:
+        $ref: '#/definitions/models.Peliculas'
+      Nombre:
+        type: string
+  models.Cliente:
+    title: Cliente
+    type: object
+    properties:
+      Celular:
+        type: integer
+        format: int64
+      CorreoElectronico:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      NumeroDeDocumento:
+        type: string
+      PrimerApellido:
+        type: string
+      PrimerNombre:
+        type: string
+      SegundoApellido:
+        type: string
+      SegundoNombre:
+        type: string
+      Telefono:
+        type: integer
+        format: int64
+      TipoDeDocumento:
+        type: string
+  models.Contreras:
+    title: Contreras
+    type: object
+    properties:
+      Apellido:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  models.Discos:
+    title: Discos
+    type: object
+    properties:
+      Disquera:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  models.Factura:
+    title: Factura
+    type: object
+    properties:
+      Cantidad:
+        type: integer
+        format: int64
+      Cliente:
+        type: string
+      Fecha:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroDeFactura:
+        type: string
+      PluDelProducto:
+        type: string
+      TotalFactura:
+        type: integer
+        format: int64
+      ValorTotal:
+        type: integer
+        format: int64
+      ValorUnitario:
+        type: integer
+        format: int64
+  models.Peliculas:
+    title: Peliculas
+    type: object
+    properties:
+      Genero:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+tags:
+- name: peliculas
+  description: |
+    PeliculasController operations for Peliculas
+- name: actores
+  description: |
+    ActoresController operations for Actores
+- name: cliente
+  description: |
+    ClienteController operations for Cliente
+- name: factura
+  description: |
+    FacturaController operations for Factura
+- name: discos
+  description: |
+    DiscosController operations for Discos
+- name: contreras
+  description: |
+    ContrerasController operations for Contreras

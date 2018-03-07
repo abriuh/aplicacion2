@@ -1,0 +1,112 @@
+
+<h1>TABLA FACTURA</h1>
+<table class="table   ">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Numero De Factura</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Plu Del Producto</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Valor Unitario</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Valor Total</th>
+      <th scope="col">Total Factura</th>
+
+
+    </tr>
+  </thead>
+
+
+  <tbody>
+  <tr ng-repeat="x in captura">
+    <td>{{x.Id}}</td>
+    <td>{{ x.NumeroDeFactura }}</td>
+    <td>{{ x.Fecha }}</td>
+    <td>{{ x.Cliente }}</td>
+    <td>{{ x.PluDelProducto }}</td>
+    <td>{{ x.Nombre }}</td>
+    <td>{{ x.ValorUnitario }}</td>
+    <td>{{ x.Cantidad }}</td>
+    <td>{{ x.ValorTotal }}</td>
+    <td>{{ x.TotalFactura }}</td>
+
+  </tr>
+  </tbody>
+</table>
+
+<form >
+  Numero De Factura:<br>
+  <input type="text" name="NumeroDeFactura" ng-model="envio.NumeroDeFactura" placeholder="Escriba Aqui">
+  <br>
+  Fecha: <br>
+  <input type="text" name="Fecha" ng-model="envio.Fecha" placeholder="Escriba Aqui">
+  <br>
+  Cliente: <br>
+  <input type="text" name="Cliente" ng-model="envio.Cliente" placeholder="Escriba Aqui">
+  <br>
+  Plu Del Producto: <br>
+  <input type="text" name="PluDelProducto" ng-model="envio.PluDelProducto" placeholder="Escriba Aqui">
+  <br>
+  Nombre: <br>
+  <input type="text" name="Nombre" ng-model="envio.Nombre" placeholder="Escriba Aqui">
+  <br>
+  Valor Unitario: <br>
+  <input type="number" name="ValorUnitario" ng-model="envio.ValorUnitario" placeholder="Escriba Aqui">
+  <br>
+  Cantidad: <br>
+  <input type="number" name="Cantidad" ng-model="envio.Cantidad" placeholder="Escriba Aqui">
+  <br>
+  Valor Total: <br>
+  <input type="number" name="ValorTotal" ng-model="envio.ValorTotal" placeholder="Escriba Aqui">
+  <br>
+  Total Factura: <br>
+  <input type="number" name="TotalFactura" ng-model="envio.TotalFactura" placeholder="Escriba Aqui">
+  <br>
+  <br>
+  <pre>{{envio |json}}</pre>
+  <input type="submit" value="enviar" ng-click="registrar()" >
+
+
+</form>
+
+
+
+<h1>TABLA CLIENTE</h1>
+
+<table class="table   ">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Tipo De Documento</th>
+      <th scope="col"># De Documento</th>
+      <th scope="col">Primer Nombre</th>
+      <th scope="col">Segundo Nombre</th>
+      <th scope="col">Primer Apellido</th>
+      <th scope="col">Segundo Apellido</th>
+      <th scope="col">Telefono Fijo</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Correo</th>
+
+
+    </tr>
+  </thead>
+
+
+  <tbody>
+  <tr ng-repeat="x in captura2">
+    <td>{{x.Id}}</td>
+    <td>{{ x.TipoDeDocumento }}</td>
+    <td>{{ x.NumeroDeDocumento }}</td>
+    <td>{{ x.PrimerNombre }}</td>
+    <td>{{ x.SegundoNombre }}</td>
+    <td>{{ x.PrimerApellido }}</td>
+    <td>{{ x.SegundoApellido }}</td>
+    <td>{{ x.Telefono }}</td>
+    <td>{{ x.Celular }}</td>
+    <td>{{ x.CorreoElectronico }}</td>
+
+  </tr>
+  </tbody>
+</table>
